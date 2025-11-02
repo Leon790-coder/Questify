@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    color: #cceeff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 16rem;
+    width: 16rem;
+    border-radius: 1rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15), 0 0 40px rgba(0, 255, 255, 0.05);
+}
+
+.text-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.9rem;
+    backdrop-filter: blur(10px);
+    border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    padding: 1.4rem;
+    margin-top: 1rem;
+    font-weight: 900;
+    line-height: 1.3;
+    font-size: 1.2rem;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.4rem;
+    margin-top: 20px;
+    font-weight: 900;
+    color: #cceeff;
+    border: none;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0077ff);
+    z-index: -1;
+    opacity: 0.4;
+    transition: 0.3s ease;
+}
+
+.picyure-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
