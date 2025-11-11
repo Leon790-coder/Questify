@@ -276,3 +276,19 @@ footer {
     display: none;
   }
 }
+
+
+video {
+  height: 22rem;
+  width:32rem;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video h2 {
+  text-align:center;
+}
