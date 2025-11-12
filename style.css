@@ -289,7 +289,7 @@ video {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: bgImage 10s ease;
+  animation: bgImage 10s ease infinite;
 }
 
 @keyframes bgImage {
