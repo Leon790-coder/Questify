@@ -69,61 +69,47 @@ a:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* RESET */
+/* -------------------------------------------------- FULL REDESIGN FOR PROVIDED HTML — CLEAN, MODERN, ANIMATED -------------------------------------------------- */
 
-*{ margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+/* ========= RESET ========= */
+
+*{ margin: 0; padding: 0; box-sizing: border-box; }
 
 
-body { background: black}
+body { font-family: "Poppins", sans-serif; background: #f3f5f9; color: #141414; line-height: 1.7; overflow-x: hidden; }
 
-/* HEADER */ .header { text-align: center; margin-bottom: 50px; animation: fadeDrop 1.3s ease forwards; }
+:root { --primary: #4a60e8; --secondary: #8b5cf6; --accent: #00c6ff; --light: #ffffff; --dark: #0e0e0e; --gradient: linear-gradient(135deg, #4a60e8 0%, #8b5cf6 50%, #00c6ff 100%); --transition: .35s ease; }
 
-.header h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; color: transparent; animation: textGlow 3s infinite ease-in-out alternate; }
+/* -------------------------------------------------- HEADER -------------------------------------------------- */ .header { padding: 60px 10%; text-align: center; background: var(--gradient); color: white; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); animation: slideDown 1.2s ease forwards; }
 
-/* SECTION CARD */ section { background: rgba(30, 41, 59, 0.85); padding: 50px; margin: 30px auto; max-width: 950px; border-radius: 20px; box-shadow: 0 0 35px rgba(56, 189, 248, 0.15); border: 1px solid rgba(148, 163, 184, 0.2); backdrop-filter: blur(10px); transition: all 0.5s ease; animation: fadeSlide 1s ease forwards; clip-path: polygon(0 0, 100% 0, 100% 92%, 95% 100%, 0 100%); }
+.header h1 { font-size: 48px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
 
-section:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 55px rgba(56, 189, 248, 0.35); border-color: #38bdf8; }
+/* -------------------------------------------------- SECTIONS -------------------------------------------------- */ section { padding: 90px 10%; position: relative; }
 
-section:active { transform: scale(0.97); transition: 0.1s; }
+section h2 { font-size: 42px; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 25px; animation: fadeUp 1s ease forwards; }
 
-section h2 { font-size: 2.4rem; font-weight: 700; color: #f8fafc; margin-bottom: 22px; border-left: 6px solid #38bdf8; padding-left: 12px; animation: popIn 1.4s ease; }
+p { font-size: 18px; margin-bottom: 18px; animation: fadeUp .9s ease forwards; }
 
-section p { margin-bottom: 20px; line-height: 1.8; font-size: 1.12rem; color: #cbd5e1; animation: rise 1.2s ease; }
+/* -------------------------------------------------- CORE VALUES / LISTS -------------------------------------------------- */ .core-values h3, .expertise-list h3 { font-size: 26px; margin: 25px 0 15px; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; animation: fadeUp 1s ease; }
 
-/* CORE VALUES */ .core-values h3 { margin-top: 25px; margin-bottom: 15px; font-size: 1.7rem; color: #f1f5f9; animation: popIn 1.6s ease; }
+ul, ol { padding-left: 20px; }
 
-.core-values ul { padding-left: 25px; }
+ul li, ol li { margin-bottom: 12px; font-size: 17px; transition: var(--transition); }
 
-.core-values li { margin-bottom: 12px; font-size: 1.15rem; color: #94a3b8; position: relative; animation: fadeList 1.4s ease; }
+ul li:hover, ol li:hover { color: var(--secondary); transform: translateX(10px); }
 
-.core-values li::before { content: "▹"; color: #38bdf8; font-size: 1.4rem; position: absolute; left: -20px; top: -3px; animation: pulseDot 2s infinite ease-in-out; }
+/* -------------------------------------------------- CARDS FOR EXPERTISE LIST -------------------------------------------------- */ .expertise-list ol li { background: var(--light); padding: 15px 20px; border-radius: 14px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); transition: var(--transition); position: relative; overflow: hidden; animation: fadeUp 1s ease; }
 
-/* EXPERTISE */ .expertise-list h3 { margin-top: 25px; margin-bottom: 20px; font-size: 1.8rem; color: #f8fafc; animation: popIn 1.8s ease; }
+.expertise-list ol li:hover { transform: translateY(-8px); box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12); }
 
-.expertise-list ol { padding-left: 25px; }
+/* -------------------------------------------------- CLIP PATH DECOR -------------------------------------------------- */ section::before { content: ""; position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: var(--gradient); opacity: .12; clip-path: polygon(100% 0, 0 0, 100% 100%); }
 
-.expertise-list li { margin-bottom: 22px; font-size: 1.15rem; color: #cbd5e1; transition: 0.3s ease; animation: rise 1.4s ease; }
+/* -------------------------------------------------- ANIMATIONS -------------------------------------------------- */ @keyframes fadeUp { 0% { opacity: 0; transform: translateY(40px); } 100% { opacity: 1; transform: translateY(0); } }
 
-.expertise-list li:hover { color: #38bdf8; transform: translateX(8px); }
+@keyframes slideDown { 0% { opacity: 0; transform: translateY(-60px); } 100% { opacity: 1; transform: translateY(0); } }
 
-.expertise-list strong { color: #38bdf8; font-weight: 700; }
+/* -------------------------------------------------- RESPONSIVE DESIGN -------------------------------------------------- */ @media (max-width: 1024px) { .header h1 { font-size: 40px; } section h2 { font-size: 36px; } section { padding: 75px 7%; } }
 
-/* --- ANIMATIONS (10 Total) --- */ @keyframes fadeDrop { 0% { opacity: 0; transform: translateY(-25px); } 100% { opacity: 1; transform: translateY(0); } }
+@media (max-width: 768px) { .header h1 { font-size: 34px; } section h2 { font-size: 30px; text-align: center; } p { font-size: 16px; } }
 
-@keyframes textGlow { 0% { filter: drop-shadow(0 0 0px #38bdf8); } 100% { filter: drop-shadow(0 0 12px #38bdf8); } }
-
-@keyframes fadeSlide { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
-
-@keyframes popIn { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
-
-@keyframes rise { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-
-@keyframes fadeList { 0% { opacity: 0; transform: translateX(-20px); } 100% { opacity: 1; transform: translateX(0); } }
-
-@keyframes pulseDot { 0% { opacity: 0.4; } 100% { opacity: 1; } }
-
-@keyframes bgPulse { 0% { filter: brightness(1); } 100% { filter: brightness(1.25); } }
-
-@keyframes glowCard { 0% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.1); } 100% { box-shadow: 0 0 45px rgba(56, 189, 248, 0.4); } }
-
-@keyframes floatUp { 0% { transform: translateY(5px); } 100% { transform: translateY(-5px); } }
+@media (max-width: 480px) { .header { padding: 50px 5%; } .header h1 { font-size: 28px; } section { padding: 60px 5%; } section h2 { font-size: 26px; } p { font-size: 15px; } ul li, ol li { font-size: 15px; } }
