@@ -4,6 +4,10 @@ body {
   font-family: 'inter', sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -38,4 +42,55 @@ body {
   background-clip: text;
   margin: 0;
 }
+
+.container a {
+  background: transparent;
+  border: 1px solid blue;
+  padding: 0.8rem 1.9rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.container a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+a {
+  background: transparent;
+  border: 1px solid blue;
+  padding: 0.8rem 1.9rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.about-me {
+  background: linear-gradient(60deg, white 50%, blue 50%);
+}
+
+.about {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  animation: opacity 4s ease-in-out; /* this will be changing the smooth transparency of the bacground*/
+}
+
+
+.about h2 {
+  color: #00ffff;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  font-weight: 800;
+}
+
+
 
