@@ -76,6 +76,7 @@ a:hover {
 .about {
   background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 3px;
   border-radius: 10px;
   animation: opacity 4s ease-in-out; /* this will be changing the smooth transparency of the bacground*/
 }
