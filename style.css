@@ -76,7 +76,7 @@ a:hover {
 *{ margin: 0; padding: 0; box-sizing: border-box; }
 
 
-body { font-family: "Poppins", sans-serif; background: #f3f5f9; color: #141414; line-height: 1.7; overflow-x: hidden; }
+body { font-family: "Poppins", sans-serif;  line-height: 1.7; overflow-x: hidden; }
 
 :root { --primary: #4a60e8; --secondary: #8b5cf6; --accent: #00c6ff; --light: #ffffff; --dark: #0e0e0e; --gradient: linear-gradient(135deg, #4a60e8 0%, #8b5cf6 50%, #00c6ff 100%); --transition: .35s ease; }
 
