@@ -69,29 +69,61 @@ a:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.about-me {
-  background: linear-gradient(60deg, white 50%, blue 50%);
-}
+/* RESET */
 
-.about {
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 3px;
-  border-radius: 10px;
-  animation: opacity 4s ease-in-out; /* this will be changing the smooth transparency of the bacground*/
-}
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
 
 
-.about h2 {
-  color: #00ffff;
-}
+body { background: linear-gradient(135deg, #0f172a 50%, #1e3a8a 50%); color: #e2e8f0; padding: 40px 20px; min-height: 100vh; animation: bgPulse 10s infinite alternate ease-in-out; }
 
-.about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: black;
-  font-weight: 800;
-}
+/* HEADER */ .header { text-align: center; margin-bottom: 50px; animation: fadeDrop 1.3s ease forwards; }
 
+.header h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; color: transparent; animation: textGlow 3s infinite ease-in-out alternate; }
 
+/* SECTION CARD */ section { background: rgba(30, 41, 59, 0.85); padding: 50px; margin: 30px auto; max-width: 950px; border-radius: 20px; box-shadow: 0 0 35px rgba(56, 189, 248, 0.15); border: 1px solid rgba(148, 163, 184, 0.2); backdrop-filter: blur(10px); transition: all 0.5s ease; animation: fadeSlide 1s ease forwards; clip-path: polygon(0 0, 100% 0, 100% 92%, 95% 100%, 0 100%); }
 
+section:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 55px rgba(56, 189, 248, 0.35); border-color: #38bdf8; }
+
+section:active { transform: scale(0.97); transition: 0.1s; }
+
+section h2 { font-size: 2.4rem; font-weight: 700; color: #f8fafc; margin-bottom: 22px; border-left: 6px solid #38bdf8; padding-left: 12px; animation: popIn 1.4s ease; }
+
+section p { margin-bottom: 20px; line-height: 1.8; font-size: 1.12rem; color: #cbd5e1; animation: rise 1.2s ease; }
+
+/* CORE VALUES */ .core-values h3 { margin-top: 25px; margin-bottom: 15px; font-size: 1.7rem; color: #f1f5f9; animation: popIn 1.6s ease; }
+
+.core-values ul { padding-left: 25px; }
+
+.core-values li { margin-bottom: 12px; font-size: 1.15rem; color: #94a3b8; position: relative; animation: fadeList 1.4s ease; }
+
+.core-values li::before { content: "▹"; color: #38bdf8; font-size: 1.4rem; position: absolute; left: -20px; top: -3px; animation: pulseDot 2s infinite ease-in-out; }
+
+/* EXPERTISE */ .expertise-list h3 { margin-top: 25px; margin-bottom: 20px; font-size: 1.8rem; color: #f8fafc; animation: popIn 1.8s ease; }
+
+.expertise-list ol { padding-left: 25px; }
+
+.expertise-list li { margin-bottom: 22px; font-size: 1.15rem; color: #cbd5e1; transition: 0.3s ease; animation: rise 1.4s ease; }
+
+.expertise-list li:hover { color: #38bdf8; transform: translateX(8px); }
+
+.expertise-list strong { color: #38bdf8; font-weight: 700; }
+
+/* --- ANIMATIONS (10 Total) --- */ @keyframes fadeDrop { 0% { opacity: 0; transform: translateY(-25px); } 100% { opacity: 1; transform: translateY(0); } }
+
+@keyframes textGlow { 0% { filter: drop-shadow(0 0 0px #38bdf8); } 100% { filter: drop-shadow(0 0 12px #38bdf8); } }
+
+@keyframes fadeSlide { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+
+@keyframes popIn { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
+
+@keyframes rise { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+
+@keyframes fadeList { 0% { opacity: 0; transform: translateX(-20px); } 100% { opacity: 1; transform: translateX(0); } }
+
+@keyframes pulseDot { 0% { opacity: 0.4; } 100% { opacity: 1; } }
+
+@keyframes bgPulse { 0% { filter: brightness(1); } 100% { filter: brightness(1.25); } }
+
+@keyframes glowCard { 0% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.1); } 100% { box-shadow: 0 0 45px rgba(56, 189, 248, 0.4); } }
+
+@keyframes floatUp { 0% { transform: translateY(5px); } 100% { transform: translateY(-5px); } }
